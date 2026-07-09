@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Movies</h1>
+    <p class="subtitle">Tap a movie to start watching</p>
+  </header>
+
+  <main>
+    <ul id="movie-grid" class="movie-grid" aria-label="Movie list">
+      <!-- Movie cards are inserted here by app.js -->
+    </ul>
+
+    <p id="empty-message" class="empty-message" hidden>
+      No movies available right now. Check back soon!
+    </p>
+  </main>
+
+  <!-- Full-screen player overlay -->
+  <div id="player-overlay" class="player-overlay" hidden>
+    <div class="player-top-bar">
+      <h2 id="player-title" class="player-title"></h2>
+      <button id="close-button" class="close-button" type="button">
+        ✕ &nbsp;Close Movie
+      </button>
+    </div>
+
+    <div class="player-stage">
+      <video
+        id="video-player"
+        controls
+        playsinline
+        preload="metadata"
+        controlsList="nodownload"
+      ></video>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
